@@ -21,9 +21,9 @@ public class ink_example : MonoBehaviour
     }
 
     // Refresh the UI elements
-    //  – Clear any current elements
-    //  – Show any text chunks
-    //  – Iterate through any choices and create listeners on them
+    //  - Clear any current elements
+    //  - Show any text chunks
+    //  - Iterate through any choices and create listeners on them
     void refresh()
     {
         // Clear the UI
@@ -71,7 +71,7 @@ public class ink_example : MonoBehaviour
     void clearUI()
     {
         int childCount = this.transform.childCount;
-        for (int i = childCount – 1; i >= 0; —i)
+        for (int i = childCount - 1; i >= 0; --i)
         {
             GameObject.Destroy(this.transform.GetChild(i).gameObject);
         }
