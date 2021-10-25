@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class mouse_click_detector : MonoBehaviour
 {
-    public AudioSource static;
+    public AudioSource static_voice;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,8 @@ public class mouse_click_detector : MonoBehaviour
 
             if (hit.collider.gameObject.name == "Power_Button")
             {
-                static.Play(0);
+                static_voice.Play(0);
             }
         }
+    }
 }
