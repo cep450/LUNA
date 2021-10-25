@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
+using UnityEngine.UI;
+
 public class ink_example : MonoBehaviour
 {
     public TextAsset inkJSONAsset;
