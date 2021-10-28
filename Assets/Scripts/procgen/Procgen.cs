@@ -33,7 +33,6 @@ public class Procgen : MonoBehaviour
 
         //check if past limit, move back to 0,0 if so 
         if(transform.position.z < zerozeroLimit) {
-            //ITS GETTING HERE BUT SENDING IT BACKWARDS
             transform.Translate(Vector3.back * zerozeroLimit);
             //update childrens' locations to return them to their original positions
             for(int i = 0; i < transform.childCount; i++) {
