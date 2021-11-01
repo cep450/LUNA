@@ -215,7 +215,6 @@ GameObject:
   m_Component:
   - component: {fileID: 462795533}
   - component: {fileID: 462795532}
-  - component: {fileID: 462795535}
   m_Layer: 0
   m_Name: audio_source
   m_TagString: Untagged
@@ -333,20 +332,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &462795535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462795531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7f223e9ba439348abb8624f656fddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textmeshpro: {fileID: 1788273259}
-  masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579427725}
   - component: {fileID: 1579427724}
+  - component: {fileID: 1579427726}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -1090,6 +1076,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579427726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579427723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7f223e9ba439348abb8624f656fddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textmeshpro: {fileID: 1788273259}
+  radioclips:
+  - {fileID: 8300000, guid: 206631ef3abffb54ca82562589d98e12, type: 3}
+  - {fileID: 8300000, guid: 83d3841f065591a4d8cc4a3a532d3005, type: 3}
+  masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
 --- !u!1 &1703235855
 GameObject:
   m_ObjectHideFlags: 0
