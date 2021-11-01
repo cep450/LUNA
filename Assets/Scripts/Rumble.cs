@@ -16,17 +16,22 @@ public class Rumble : MonoBehaviour
 
     Vector3 initialXYZ;
 
+    float halfscalex;
+    float halfscaley;
+
     // Start is called before the first frame update
     void Start()
     {
         initialXYZ = transform.position;
+        halfscalex = xscale / 2f;
+        halfscaley = yscale / 2f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float x = initialXYZ.x + (xscale * Mathf.PerlinNoise(Time.time * speedmult, 0));
-        float y = initialXYZ.y + (yscale * Mathf.PerlinNoise(0, Time.time * speedmult));
+        float x = initialXYZ.x + (xscale * Mathf.PerlinNoise(Time.time * speedmult, 0)) - halfscalex;
+        float y = initialXYZ.y + (yscale * Mathf.PerlinNoise(0, Time.time * speedmult)) - halfscaley;
         transform.position = new Vector3(x, y, transform.position.z);
     }
 }
