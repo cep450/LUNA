@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xscale: 0.01
-  yscale: 0.06
+  yscale: 0.05
   speedmult: 6
 --- !u!4 &2004572432
 Transform:
