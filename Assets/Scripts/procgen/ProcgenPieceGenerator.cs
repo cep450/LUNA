@@ -9,16 +9,8 @@ public class ProcgenPieceGenerator : MonoBehaviour
 
     Procgen procgen;
 
-/*
-    Sprite sprite1;			//beginning in sequence 
-    Sprite sprite2 = null; 		//middle in sequence 
-    Sprite sprite3 = null; 		//end in sequence 
-*/
-
-    //TODO
-    //List<Sprite> sprites = new List<Sprite>();
-
-    public Sprite sprite;
+    //first is beginning in sequence, then random middles, then last is end
+    List<Sprite> sprites = new List<Sprite>();
 
     public float initxbaseline;
     public float initxwiggle = 0f;
@@ -52,7 +44,7 @@ public class ProcgenPieceGenerator : MonoBehaviour
     //everything not sent here is set as a default or unused above. 
     //so other constructors just override default values. 
     public void init(Sprite s, float initx, float inity, float initz, float genapart, Procgen p) {
-        sprite = s;
+        sprites.Add(s);
         initxbaseline = initx;
         initybaseline = inity;
         initzbaseline = initz;
@@ -100,7 +92,9 @@ public class ProcgenPieceGenerator : MonoBehaviour
 
                 } else {
                     //only generating a single 
-                    generateSingle(basex, basey, basez);
+                    //pick a sprite 
+                    int spriteindex = (int)(Random.Range(0, sprites.Count));
+                    generateSingle(basex, basey, basez, spriteindex);
                 }
 
             } else {
@@ -118,36 +112,54 @@ public class ProcgenPieceGenerator : MonoBehaviour
             float singlex = Random.Range(x - clumpwigglex, x + clumpwigglex);
             float singley = Random.Range(y - clumpwiggley, y + clumpwiggley);
             float singlez = Random.Range(z - clumpwigglez, z + clumpwigglez);
-            generateSingle(singlex, singley, singlez);
+            int spriteindex = (int)(Random.Range(0, sprites.Count));
+            generateSingle(singlex, singley, singlez, spriteindex);
         }
     }
 
     //generate a sequence starting at a baseline x, y, z
     private void generateSequence(float x, float y, float z, int count) {
         
-        for(int i = 0; i < count; i++) {
+        int spriteindex;
+        float singlex;
+        float singley;
+        float singlez;
 
-            //TODO also need to choose which sprite. beginning middle end 
+        ////beginning 
+        spriteindex = 0;
+        singlex = x;
+        singley = y;
+        singlez = z;
+        generateSingle(singlex, singley, singlez, spriteindex);
 
-            float singlex = x + (clumpwigglex * i);
-            float singley = y + (clumpwiggley * i);
-            float singlez = z + (clumpwigglez * i);
-            generateSingle(singlex, singley, singlez);
+        ///middle
+        for(int i = 1; i < count - 1; i++) {
+
+            singlex = x + (clumpwigglex * i);
+            singley = y + (clumpwiggley * i);
+            singlez = z + (clumpwigglez * i);
+
+            //random sprite from middle 
+            spriteindex = (int)(Random.Range(1, sprites.Count - 1));
+
+            generateSingle(singlex, singley, singlez, spriteindex);
         }
+        ////end 
+        spriteindex = sprites.Count - 1;
+        singlex = x + (clumpwigglex * count);
+        singley = y + (clumpwiggley * count);
+        singlez = z + (clumpwigglez * count);
+        generateSingle(singlex, singley, singlez, spriteindex);
     }
 
     //generate a single sprite at an x, y, z coordinate 
-    private void generateSingle(float x, float y, float z) {
+    private void generateSingle(float x, float y, float z, int spriteindex) {
         
         //instantiate procgen.spritePrefab at xyz 
         GameObject obj = Instantiate(procgen.spritePrefab, new Vector3(x, y, z), Quaternion.identity);
         
         //set the sprite
-        //TODO if more than 1 sprite, pick randomly
-        obj.GetComponent<SpriteRenderer>().sprite = sprite;
-        
-        //TODO atually... make a list of sprites, make a constructor where you can input however many sprites you want and it adds them to the list- arbitrry number of arguments 
-        //or an add method or something 
+        obj.GetComponent<SpriteRenderer>().sprite = sprites[spriteindex];
         
     }
 
