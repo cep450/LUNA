@@ -47,13 +47,14 @@ public class radio_system : MonoBehaviour
         }
         if (frequency%10<=5)
         {
-            change_music_play(Mathf.RoundToInt(frequency / 10));
+            change_music_play(Mathf.RoundToInt(frequency / 10)-1);
+            Debug.Log(Mathf.RoundToInt(frequency / 10) - 1);
         }
        
     }
     public void SetSound(float soundLevel)
     {
-        Debug.Log(soundLevel);
+        
         masterMixer.SetFloat("SFX_VOL", soundLevel);
     }
     void change_music_play(int frequency)

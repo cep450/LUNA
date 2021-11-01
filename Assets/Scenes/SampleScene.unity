@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 1579427724}
   - component: {fileID: 1579427726}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: radio_auido_source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,6 +1092,8 @@ MonoBehaviour:
   radioclips:
   - {fileID: 8300000, guid: 206631ef3abffb54ca82562589d98e12, type: 3}
   - {fileID: 8300000, guid: 83d3841f065591a4d8cc4a3a532d3005, type: 3}
+  - {fileID: 8300000, guid: 63bf1beb5ba6c4d44986e2294918132d, type: 3}
+  - {fileID: 8300000, guid: 7147a52bfdc666a4a85ab55d624046fe, type: 3}
   masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
 --- !u!1 &1703235855
 GameObject:
