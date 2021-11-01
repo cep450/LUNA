@@ -5,8 +5,14 @@ using UnityEngine;
 public class Procgen : MonoBehaviour
 {
 
-    public Sprite examplesprite;
 
+
+    public Sprite squareexample;
+    ProcgenPieceGenerator squareexamplegen;
+
+
+
+    public GameObject spritePrefab;
 
 
     //VELOCITY IS GOING TO BE THE VELOCITY OF THE CAR
@@ -21,7 +27,15 @@ public class Procgen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        //set up all the prefab pieces. 
+        squareexamplegen = new ProcgenPieceGenerator();
+        //squareexamplegen.init();
+
         
+
+        //and, for the purposes of this demo, start generating the square. 
+        //////////squareexamplegen.generate = true;
     }
 
     // Update is called once per frame
@@ -33,7 +47,6 @@ public class Procgen : MonoBehaviour
 
         //check if past limit, move back to 0,0 if so 
         if(transform.position.z < zerozeroLimit) {
-            //ITS GETTING HERE BUT SENDING IT BACKWARDS
             transform.Translate(Vector3.back * zerozeroLimit);
             //update childrens' locations to return them to their original positions
             for(int i = 0; i < transform.childCount; i++) {
@@ -48,14 +61,12 @@ public class Procgen : MonoBehaviour
                 tryCullChild(i);
             }
         }
-
-
     }
 
 //basically the inside of a "for each child..." loop, since we can do this in the check if past limit loop to save it from looping twice 
     void tryCullChild(int i) {
         if(transform.GetChild(i).position.z > cullLimit) {
-            //TODO delete child obj 
+            Destroy(transform.GetChild(i));
         }
     }
 }
