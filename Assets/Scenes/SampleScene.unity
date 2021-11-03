@@ -215,8 +215,6 @@ GameObject:
   m_Component:
   - component: {fileID: 462795533}
   - component: {fileID: 462795532}
-  - component: {fileID: 462795534}
-  - component: {fileID: 462795535}
   m_Layer: 0
   m_Name: audio_source
   m_TagString: Untagged
@@ -334,37 +332,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &462795534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462795531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b464006cca941f043ae4f53472440e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radioclips:
-  - {fileID: 8300000, guid: 83d3841f065591a4d8cc4a3a532d3005, type: 3}
-  - {fileID: 8300000, guid: 206631ef3abffb54ca82562589d98e12, type: 3}
-  static_noise: {fileID: 8300000, guid: 54d1e85e5a77ef949a1fc3552f14b9b4, type: 3}
---- !u!114 &462795535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462795531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7f223e9ba439348abb8624f656fddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textmeshpro: {fileID: 0}
-  radioclips: []
-  static_noise: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSONAsset: {fileID: 4900000, guid: 3a859473134b9f5418912c42c37d4d19, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: 0f0d601e0b06ff44380b5c5e82f04035, type: 3}
   canvas: {fileID: 548415166}
   textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
@@ -1036,8 +1003,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1579427725}
   - component: {fileID: 1579427724}
+  - component: {fileID: 1579427726}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: radio_auido_source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,6 +1121,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579427726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579427723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7f223e9ba439348abb8624f656fddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textmeshpro: {fileID: 1788273259}
+  radioclips:
+  - {fileID: 8300000, guid: 206631ef3abffb54ca82562589d98e12, type: 3}
+  - {fileID: 8300000, guid: 83d3841f065591a4d8cc4a3a532d3005, type: 3}
+  - {fileID: 8300000, guid: 63bf1beb5ba6c4d44986e2294918132d, type: 3}
+  - {fileID: 8300000, guid: 7147a52bfdc666a4a85ab55d624046fe, type: 3}
+  masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
 --- !u!1 &1703235855
 GameObject:
   m_ObjectHideFlags: 0
