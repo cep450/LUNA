@@ -5,6 +5,7 @@ using UnityEngine;
 public class mouse_click_detector : MonoBehaviour
 {
     public AudioSource static_voice;
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class mouse_click_detector : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
-            if (hit.collider.gameObject.name == "Power_Button")
+            if (hit.collider.gameObject.name == "radio")
             {
                 static_voice.Play(0);
             }
