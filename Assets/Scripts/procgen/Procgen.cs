@@ -30,12 +30,13 @@ public class Procgen : MonoBehaviour
 
         //set up all the prefab pieces. 
         squareexamplegen = new ProcgenPieceGenerator();
-        //squareexamplegen.init();
+        //init(Sprite s, float initx, float inity, float initz, float genapart, Procgen p)
+        squareexamplegen.init(squareexample, 0, 0, 0, 10, this);
 
         
 
         //and, for the purposes of this demo, start generating the square. 
-        //////////squareexamplegen.generate = true;
+        squareexamplegen.generate = true;
     }
 
     // Update is called once per frame
