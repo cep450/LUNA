@@ -7,9 +7,9 @@ public class Procgen : MonoBehaviour
 
 
 
-    public Sprite squareexample;
-    ProcgenPieceGenerator squareexamplegen;
+    public Sprite squareexamplesprite;
 
+    List<ProcgenPieceGenerator> generators = new List<ProcgenPieceGenerator>();
 
 
     public GameObject spritePrefab;
@@ -20,7 +20,7 @@ public class Procgen : MonoBehaviour
     public CarControls car;
     //will move all children by this and cull any who have passed the limit
     //or even, move itself by this and set itself back to 0 every so often (moving children accordingly) 
-    float cullLimit = 10f;
+    float cullLimit = -50f;
     float zerozeroLimit = -1000f;
 
 
@@ -29,14 +29,17 @@ public class Procgen : MonoBehaviour
     {
 
         //set up all the prefab pieces. 
-        squareexamplegen = new ProcgenPieceGenerator();
-        //init(Sprite s, float initx, float inity, float initz, float genapart, Procgen p)
-        squareexamplegen.init(squareexample, 0, 0, 0, 10, this);
+        //constructor1(Sprite s, float initx, float inity, float initz, float genapart, Procgen p)
+        ProcgenPieceGenerator squareexample = new ProcgenPieceGenerator(squareexamplesprite, 0, 0, 50, 10, this);
+        generators.Add(squareexample);
+
 
         
 
         //and, for the purposes of this demo, start generating the square. 
-        squareexamplegen.generate = true;
+        squareexample.generate = true;
+
+        //an alternative method- control what's generating by adding or removing from the list.
     }
 
     // Update is called once per frame
@@ -62,12 +65,19 @@ public class Procgen : MonoBehaviour
                 tryCullChild(i);
             }
         }
+
+
+        //CALL ALL THE GENERATORS UPDATE FUNCTIONS 
+        foreach(ProcgenPieceGenerator generator in generators) {
+            generator.ProcUpdate();
+        }
+
     }
 
 //basically the inside of a "for each child..." loop, since we can do this in the check if past limit loop to save it from looping twice 
     void tryCullChild(int i) {
-        if(transform.GetChild(i).position.z > cullLimit) {
-            Destroy(transform.GetChild(i));
+        if(transform.GetChild(i).position.z < cullLimit) {
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
 }

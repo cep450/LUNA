@@ -398,7 +398,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 1.8
   m_Depth: -1
   m_CullingMask:
@@ -423,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.05, z: -10}
+  m_LocalPosition: {x: 0.05, y: -0.05, z: -3.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0beb6e7bd6f516848892bf73f50eb996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  squareexample: {fileID: 7482667652216324306, guid: 439e745a5fb50a448bdc416685a2f3e6, type: 3}
+  squareexamplesprite: {fileID: 7482667652216324306, guid: 439e745a5fb50a448bdc416685a2f3e6, type: 3}
   spritePrefab: {fileID: 4030381773979230160, guid: a87f259604aff48478a72e8ba85841a1, type: 3}
   car: {fileID: 1131936759}
 --- !u!4 &961524415
