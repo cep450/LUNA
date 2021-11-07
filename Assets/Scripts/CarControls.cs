@@ -55,12 +55,7 @@ can also control audio related to the car's speed
             }
         }
 
-        Debug.Log(velocity);
-        
-        
 
-
-        Debug.Log(velocity);
     }
 
     public float getVelocity() {
