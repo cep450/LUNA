@@ -10,7 +10,7 @@ public class pitchToVelocity : MonoBehaviour
     public CarControls car;
 
     float pitchmult = 0.09f;
-    //float veloffset = 0f;
+    float veloffset = 3f;
    // float pitchlinear = 0f;
 
     // Start is called before the first frame update
@@ -26,6 +26,6 @@ public class pitchToVelocity : MonoBehaviour
     void Update()
     {
         //audioSource.pitch = (car.getVelocity() + veloffset) * pitchmult + pitchlinear;
-        audioSource.pitch = car.getVelocity() * pitchmult;
+        audioSource.pitch = (car.getVelocity() - veloffset) * pitchmult;
     }
 }

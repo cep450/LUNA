@@ -30,7 +30,7 @@ public class Procgen : MonoBehaviour
 
         //set up all the prefab pieces. 
         //constructor1(Sprite s, float initx, float inity, float initz, float genapart, Procgen p)
-        ProcgenPieceGenerator squareexample = new ProcgenPieceGenerator(squareexamplesprite, 0, 0, 50, 10, this);
+        ProcgenPieceGenerator squareexample = new ProcgenPieceGenerator(squareexamplesprite, 5, 0, 50, 10, this);
         generators.Add(squareexample);
 
 

@@ -14,14 +14,14 @@ can also control audio related to the car's speed
 
 */
 
-    float velocity = 10f;
+    float velocity = 15f;
 
     float acceleration = 2f;
     float deceleration = 2f;
 
-    float maxvelocity = 25f;
-    float baseline = 15f;
-    float minvelocity = 2f;
+    float maxvelocity = 30f;
+    float baseline = 20f;
+    float minvelocity = 5f;
 
     float lerp = 0.01f;
 
