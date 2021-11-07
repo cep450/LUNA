@@ -14,7 +14,16 @@ can also control audio related to the car's speed
 
 */
 
-    float velocity = 10f;
+    float velocity = 15f;
+
+    float acceleration = 2f;
+    float deceleration = 2f;
+
+    float maxvelocity = 30f;
+    float baseline = 20f;
+    float minvelocity = 5f;
+
+    float lerp = 0.01f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +34,28 @@ can also control audio related to the car's speed
     // Update is called once per frame
     void Update()
     {
-        
+ 
+        if(Input.GetKey(KeyCode.W)) {
+            //W, forward, accelerate
+            if(velocity < maxvelocity) {
+                velocity += acceleration * Time.deltaTime;
+            }
+
+        } else if(Input.GetKey(KeyCode.S)) {
+            //S, back, break 
+            if(velocity > minvelocity) {
+                velocity -= deceleration * Time.deltaTime;
+            }
+
+        } else {
+            //not pressing either 
+            //decay if going fast 
+            if(velocity > baseline) {
+                velocity = Mathf.Lerp(velocity, baseline, lerp);
+            }
+        }
+
+
     }
 
     public float getVelocity() {
