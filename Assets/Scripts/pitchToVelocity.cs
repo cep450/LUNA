@@ -27,6 +27,5 @@ public class pitchToVelocity : MonoBehaviour
     {
         //audioSource.pitch = (car.getVelocity() + veloffset) * pitchmult + pitchlinear;
         audioSource.pitch = car.getVelocity() * pitchmult;
-        Debug.Log(audioSource.pitch);
     }
 }
