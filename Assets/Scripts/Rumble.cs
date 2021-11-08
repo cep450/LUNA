@@ -13,6 +13,8 @@ public class Rumble : MonoBehaviour
     public float yscale;
     public float speedmult;
 
+    public float multiplier;
+
 
     Vector3 initialXYZ;
 
@@ -30,8 +32,8 @@ public class Rumble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = initialXYZ.x + (xscale * Mathf.PerlinNoise(Time.time * speedmult, 0)) - halfscalex;
-        float y = initialXYZ.y + (yscale * Mathf.PerlinNoise(0, Time.time * speedmult)) - halfscaley;
+        float x = initialXYZ.x + ((xscale * Mathf.PerlinNoise(Time.time * speedmult, 0)) - halfscalex) * multiplier;
+        float y = initialXYZ.y + ((yscale * Mathf.PerlinNoise(0, Time.time * speedmult)) - halfscaley) * multiplier;
         transform.position = new Vector3(x, y, transform.position.z);
     }
 }
