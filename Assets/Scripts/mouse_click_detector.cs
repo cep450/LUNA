@@ -8,6 +8,7 @@ public class mouse_click_detector : MonoBehaviour
     public GameObject radio;
     public Sprite radio_normal;
     public Sprite radio_hover;
+    public static bool radio_change_on;
     void Start()
     {
         
@@ -27,16 +28,14 @@ public class mouse_click_detector : MonoBehaviour
             if (hit.transform.name == "radio")
             {
                 radio.GetComponent<SpriteRenderer>().sprite = radio_hover;
+                radio_change_on = true;
             }
-            else
-            {
-                radio.GetComponent<SpriteRenderer>().sprite = radio_normal;
-            }
-            //Debug.Log("Clicked on " + hit.transform.name);
         }
         else
         {
-            Debug.Log("Nothing hit");
+            radio.GetComponent<SpriteRenderer>().sprite = radio_normal;
+           // Debug.Log("Nothing hit");
+            radio_change_on = false;
         }
     
     }
