@@ -4,29 +4,40 @@ using UnityEngine;
 
 public class mouse_click_detector : MonoBehaviour
 {
-    public AudioSource static_voice;
     // Start is called before the first frame update
+    public GameObject radio;
+    public Sprite radio_normal;
+    public Sprite radio_hover;
+    public static bool radio_change_on;
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+       
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition );
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+
         {
-
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-
-
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-
-            if (hit.collider.gameObject.name == "Power_Button")
+            if (hit.transform.name == "radio")
             {
-                static_voice.Play(0);
+                radio.GetComponent<SpriteRenderer>().sprite = radio_hover;
+                radio_change_on = true;
             }
         }
+        else
+        {
+            radio.GetComponent<SpriteRenderer>().sprite = radio_normal;
+           // Debug.Log("Nothing hit");
+            radio_change_on = false;
+        }
+    
     }
-}
+    }
+
