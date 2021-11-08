@@ -7,7 +7,7 @@ public class Road : MonoBehaviour
 
     public CarControls car;
     float limit = -50;
-    float moveby = 200; 
+    float moveby = 199; 
 
     // Update is called once per frame
     void Update()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkyMove : MonoBehaviour
 {
 
-    float rate = 0.01f;
+    float rate = 0.1f;
     float max = -1f;
 
     // Update is called once per frame
