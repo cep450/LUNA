@@ -68,7 +68,7 @@ public class radio_system : MonoBehaviour
     }
     void change_music_play(int frequency)
     {
-        Debug.Log(frequency);
+       // Debug.Log(frequency);
         radio.clip = radioclips[frequency];
         radio.Play(0);
         current_song = frequency;
