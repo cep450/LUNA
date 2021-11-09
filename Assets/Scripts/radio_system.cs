@@ -17,7 +17,7 @@ public class radio_system : MonoBehaviour
     private AudioSource radio;
     public AudioMixer masterMixer;
     public GameObject dial;
-    public GameObject dial_2;
+   // public GameObject dial_2;
     public Camera orth_cam;
     private int current_song;
     float Current_mos_x = 0.0f;
@@ -47,7 +47,7 @@ public class radio_system : MonoBehaviour
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
                     dial.transform.Rotate(0,0,1.5f,Space.Self);
-                    dial_2.transform.Rotate(0, 0, -1.2f, Space.Self);
+                  //  dial_2.transform.Rotate(0, 0, -1.2f, Space.Self);
                 }
                 if (mousePos.x < Current_mos_x)
                 {
@@ -55,7 +55,7 @@ public class radio_system : MonoBehaviour
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
                     dial.transform.Rotate(0, 0, -1.5f, Space.Self);
-                    dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
+                   // dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
                 }
 
             }
