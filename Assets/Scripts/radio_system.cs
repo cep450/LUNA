@@ -16,6 +16,8 @@ public class radio_system : MonoBehaviour
     // public AudioClip static_noise;
     private AudioSource radio;
     public AudioMixer masterMixer;
+    public GameObject dial;
+   // public GameObject dial_2;
     public Camera orth_cam;
     private int current_song;
     float Current_mos_x = 0.0f;
@@ -41,15 +43,19 @@ public class radio_system : MonoBehaviour
             {
                 if (mousePos.x>Current_mos_x)
                 {
-                    frequency = frequency + 0.1f;
+                    frequency = frequency + 0.3f;
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
+                    dial.transform.Rotate(0,0,1.5f,Space.Self);
+                  //  dial_2.transform.Rotate(0, 0, -1.2f, Space.Self);
                 }
                 if (mousePos.x < Current_mos_x)
                 {
-                    frequency = frequency -0.1f;
+                    frequency = frequency -0.3f;
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
+                    dial.transform.Rotate(0, 0, -1.5f, Space.Self);
+                   // dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
                 }
 
             }
@@ -59,15 +65,15 @@ public class radio_system : MonoBehaviour
         }
 
        // Debug.Log(0.55f + ((1.78f - 0.55f) * frequency / ((radioclips.Length - 1) * 10 + 5)));
-        indicator.transform.position = new Vector3(0.55f+((1.78f-0.55f)*frequency/( (radioclips.Length - 1) * 10 + 5)), indicator.transform.position.y,indicator.transform.position.z);
+        indicator.transform.position = new Vector3(0.55f+((1.85f-0.55f)*frequency/( (radioclips.Length - 1) * 10 + 5)), indicator.transform.position.y,indicator.transform.position.z);
         if (frequency < 0)
         {
-            frequency = (radioclips.Length - 1) * 10 + 5;
+            frequency = 0;
 
         }
         if (frequency > (radioclips.Length - 1) * 10 + 5)
         {
-            frequency = 0;
+            frequency = (radioclips.Length - 1) * 10 + 5;
 
         }
 
