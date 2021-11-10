@@ -9,6 +9,12 @@ public class Procgen : MonoBehaviour
 
     public Sprite squareexamplesprite;
 
+    public Sprite spr_speedsign;
+    public Sprite spr_birds;
+    public Sprite spr_tree;
+    public Sprite spr_brokencar;
+
+
     List<ProcgenPieceGenerator> generators = new List<ProcgenPieceGenerator>();
 
 
@@ -30,14 +36,35 @@ public class Procgen : MonoBehaviour
 
         //set up all the prefab pieces. 
         //constructor1(Sprite s, float initx, float inity, float initz, float genapart, Procgen p)
-        ProcgenPieceGenerator squareexample = new ProcgenPieceGenerator(squareexamplesprite, 5, 0, 50, 10, this);
-        generators.Add(squareexample);
+        //ProcgenPieceGenerator squareexample = new ProcgenPieceGenerator(squareexamplesprite, 5, 0, 50, 10, this);
+        //generators.Add(squareexample);
 
+        /*
+        public Sprite spr_speedsign;
+    public Sprite spr_birds;
+    public Sprite spr_tree;
+    public Sprite spr_brokencar;
+        */
 
+        ProcgenPieceGenerator speedsign = new ProcgenPieceGenerator(spr_speedsign, 7, 0, 0, 25, this);
+        speedsign.genapartwiggle = 10;
+        generators.Add(speedsign);
+
+        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 10, 100, 50, this);
+        birds.genapartwiggle = 20;
+        generators.Add(birds);
+
+        ProcgenPieceGenerator brokencar = new ProcgenPieceGenerator(spr_brokencar, 15, 0, 50, 100, this);
+        brokencar.genapartwiggle = 50;
+        generators.Add(brokencar);
+
+        speedsign.generate = true;
+        birds.generate = true;
+        brokencar.generate = true;
         
 
         //and, for the purposes of this demo, start generating the square. 
-        squareexample.generate = true;
+        //squareexample.generate = true;
 
         //an alternative method- control what's generating by adding or removing from the list.
     }
