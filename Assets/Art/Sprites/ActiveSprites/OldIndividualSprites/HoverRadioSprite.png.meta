@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 7c0f31d8bd474fe4f8709f55179923ed
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6671279368078078362
+    second: HoverRadioSprite_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
@@ -101,7 +104,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HoverRadioSprite_0
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 170
+        height: 92
+      alignment: 9
+      pivot: {x: 0.015949205, y: 0.52236086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91bfa34d35259c50800000000000000
+      internalID: 6671279368078078362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

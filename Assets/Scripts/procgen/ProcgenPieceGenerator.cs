@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProcgenPieceGenerator : MonoBehaviour
+public class ProcgenPieceGenerator
 {
 
     public bool generate = false;
@@ -39,11 +39,12 @@ public class ProcgenPieceGenerator : MonoBehaviour
 
 
     //these are basically constructors, it's just not good to use constructors with monobehaviors or something 
+    //TODO nvm making this not a monobehavior it can just be a class. could bring back constructors if i wanted! 
 
     //most basic piece. just one sprite generated at a fixed position at a fixed interval. 
     //everything not sent here is set as a default or unused above. 
     //so other constructors just override default values. 
-    public void init(Sprite s, float initx, float inity, float initz, float genapart, Procgen p) {
+    public ProcgenPieceGenerator(Sprite s, float initx, float inity, float initz, float genapart, Procgen p) {
         sprites.Add(s);
         initxbaseline = initx;
         initybaseline = inity;
@@ -55,14 +56,8 @@ public class ProcgenPieceGenerator : MonoBehaviour
     //TODO constructors for other things, as needed 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    // (this gets called by) Update once per frame
+    public void ProcUpdate()
     {
         //only generate if turned on 
         //generation is turned on and off externally 
@@ -156,10 +151,13 @@ public class ProcgenPieceGenerator : MonoBehaviour
     private void generateSingle(float x, float y, float z, int spriteindex) {
         
         //instantiate procgen.spritePrefab at xyz 
-        GameObject obj = Instantiate(procgen.spritePrefab, new Vector3(x, y, z), Quaternion.identity);
+        GameObject obj = Object.Instantiate(procgen.spritePrefab, new Vector3(x, y, z), Quaternion.identity);
         
         //set the sprite
         obj.GetComponent<SpriteRenderer>().sprite = sprites[spriteindex];
+
+        //set the parent 
+        obj.transform.SetParent(procgen.transform);
         
     }
 
