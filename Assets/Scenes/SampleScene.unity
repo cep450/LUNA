@@ -1188,7 +1188,7 @@ Transform:
   m_GameObject: {fileID: 1082251483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.1, z: 272}
-  m_LocalScale: {x: 100.917, y: 1, z: 106.9568}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 2004572432}
   m_RootOrder: 11
@@ -1914,7 +1914,6 @@ MonoBehaviour:
   indicator: {fileID: 1923563037}
   masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
   dial: {fileID: 1278717880}
-  dial_2: {fileID: 1478443258}
   orth_cam: {fileID: 620205571}
 --- !u!1 &1703235855
 GameObject:
