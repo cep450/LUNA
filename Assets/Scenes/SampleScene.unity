@@ -2343,6 +2343,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 83d3841f065591a4d8cc4a3a532d3005, type: 3}
   - {fileID: 8300000, guid: 4c00119d7e3b84144b300b9031cc9857, type: 3}
   - {fileID: 8300000, guid: 7147a52bfdc666a4a85ab55d624046fe, type: 3}
+  - {fileID: 8300000, guid: d8a855c1651c60d42882436fa62c03d9, type: 3}
+  - {fileID: 8300000, guid: 39095ce598fe475498474dcd5b07abc8, type: 3}
+  - {fileID: 8300000, guid: 332438bd714324b4c85cbf1c25fc9a47, type: 3}
+  - {fileID: 8300000, guid: 44981cab4e1fbf045a25444ef9e28493, type: 3}
+  - {fileID: 8300000, guid: 95225f0da064e7747890471f4472da15, type: 3}
+  - {fileID: 8300000, guid: a7428f1b1a3457448b1b3c109523df2c, type: 3}
+  - {fileID: 8300000, guid: 5dba44af7d3747640a6e825027812616, type: 3}
+  - {fileID: 8300000, guid: 11c143ca7986a5b43967d9f45f62f829, type: 3}
   indicator: {fileID: 1923563037}
   masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
   dial: {fileID: 1278717880}

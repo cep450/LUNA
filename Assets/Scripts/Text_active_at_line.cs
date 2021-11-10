@@ -61,7 +61,7 @@ public class Text_active_at_line : MonoBehaviour
                 TextBoxManager.text_end = false;
 
             }
-            if (current_text_file == 2 && radio_system.current_playlist == 2)
+            if (current_text_file == 2 && radio_system.current_playlist == 4)
             {
 
 
@@ -72,7 +72,7 @@ public class Text_active_at_line : MonoBehaviour
                 TextBoxManager.text_end = false;
              
             }
-            if (current_text_file == 3 && radio_system.current_playlist == 3)
+            if (current_text_file == 3 && radio_system.current_playlist == 6)
             {
 
 
