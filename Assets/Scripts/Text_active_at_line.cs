@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class Text_active_at_line : MonoBehaviour
 {
-    public TextAsset theText;
-
+    private TextAsset theText;
+    public TextAsset Text1;
+    public TextAsset Text2;
+    public TextAsset Text3;
+    public TextAsset Text4;
     public int startLine;
     public int endLine;
+    private int current_text_file = 1;
+    public GameObject button;
 
     public TextBoxManager theTextBox;
 
@@ -19,11 +24,13 @@ public class Text_active_at_line : MonoBehaviour
 
     void Start()
     {
+        theText = Text1;
         theTextBox = FindObjectOfType<TextBoxManager>();
         theTextBox.ReloadScript(theText);
         theTextBox.currentLine = startLine;
         theTextBox.endAtLine = endLine;
         theTextBox.EnableTextBox();
+
 
         //stop rat chasing
 
@@ -32,27 +39,64 @@ public class Text_active_at_line : MonoBehaviour
         {
             Debug.Log("Destroying");
             Destroy(gameObject);
+         
         }
     }
 
     void Update()
     {
+        if (TextBoxManager.text_end==true)
+        {
+          
+            button.SetActive(false);
+            if (current_text_file == 1 && radio_system.current_playlist == 0)
+            {
         
-     
+               
+                    theText = Text2;
+                endLine = 17;
+                Reload();
+                    current_text_file = 2;
+                    
+                TextBoxManager.text_end = false;
+
+            }
+            if (current_text_file == 2 && radio_system.current_playlist == 2)
+            {
 
 
+                endLine = 16;
+                theText = Text3;
+                    Reload();
+                    current_text_file = 3;
+                TextBoxManager.text_end = false;
+             
+            }
+            if (current_text_file == 3 && radio_system.current_playlist == 3)
+            {
+
+
+                endLine = 7;
+                theText = Text4;
+                Reload();
+                current_text_file = 4;
+                TextBoxManager.text_end = false;
+
+            }
+
+        }
     }
-    public void TaskOnClick()
+    public void Reload()
     {
       
                 theTextBox.ReloadScript(theText);
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
                 theTextBox.EnableTextBox();
-
-                //stop rat chasing
-
-
+        button.SetActive(true);
+        //stop rat chasing
+        Debug.Log("reload");
+        button.SetActive(true);
                 if (destroyWhenActivated)
                 {
                     Debug.Log("Destroying");

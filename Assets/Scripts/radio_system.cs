@@ -21,6 +21,7 @@ public class radio_system : MonoBehaviour
     public Camera orth_cam;
     private int current_song;
     float Current_mos_x = 0.0f;
+    public static int current_playlist;
     void Start()
     {
         radio = GetComponent<AudioSource>();
@@ -106,7 +107,8 @@ public class radio_system : MonoBehaviour
     }
     void change_music_play(int frequency)
     {
-       // Debug.Log(frequency);
+        // Debug.Log(frequency);
+        current_playlist = frequency;
         radio.clip = radioclips[frequency];
         radio.Play(0);
         current_song = frequency;

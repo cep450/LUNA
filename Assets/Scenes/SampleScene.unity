@@ -248,10 +248,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1b95d97aeab342b04ee5f9fe3f89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theText: {fileID: 4900000, guid: 15308f0385771514cb359c775d8240e9, type: 3}
+  Text1: {fileID: 4900000, guid: 15308f0385771514cb359c775d8240e9, type: 3}
+  Text2: {fileID: 4900000, guid: 4290e6e68cc08274da388477c6c97d54, type: 3}
+  Text3: {fileID: 4900000, guid: b92441fc42cfd3c40b9a3b5f2e0f6e49, type: 3}
+  Text4: {fileID: 4900000, guid: 84e74d9db09544048b2662aefa824c80, type: 3}
   startLine: 0
-  endLine: 10
-  theTextBox: {fileID: 0}
+  endLine: 21
+  button: {fileID: 1165813381}
+  theTextBox: {fileID: 139203984}
   destroyWhenActivated: 0
   requireButtonPress: 0
   toBeTriggered: 1
@@ -1597,9 +1601,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 121711460}
-        m_TargetAssemblyTypeName: Text_active_at_line, Assembly-CSharp
-        m_MethodName: TaskOnClick
+      - m_Target: {fileID: 139203984}
+        m_TargetAssemblyTypeName: TextBoxManager, Assembly-CSharp
+        m_MethodName: next_line
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

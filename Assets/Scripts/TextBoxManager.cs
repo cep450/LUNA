@@ -13,6 +13,7 @@ public class TextBoxManager : MonoBehaviour
 
     public int currentLine;
     public int endAtLine;
+    public static bool text_end=false;
 
   
 
@@ -69,25 +70,15 @@ public class TextBoxManager : MonoBehaviour
 
         //theText.text = textLines[currentLine];
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        { //when [space] is pressed...
-            if (!isTyping)
-            {
-                currentLine += 1; //move to the next line
-                if (currentLine > endAtLine)
+        
+                if (currentLine == endAtLine)
                 { //once you've reached the end of the lines...
-                                      DisableTextBox();//go to the DisableTextBox
+            text_end = true;        
                 }
-                else
-                { //otherwise, the text will scroll
-                    StartCoroutine(TextScroll(textLines[currentLine])); //when a line is on the screen, move onto the next and start the coroutine to scroll through the text
-                }
-            }
-            else if (isTyping && !cancelTyping)
-            { //interrupting the text
-                cancelTyping = true;
-            }
-        }
+              
+            
+            
+     
     }
 
     private IEnumerator TextScroll(string lineOfText)
@@ -111,8 +102,10 @@ public class TextBoxManager : MonoBehaviour
         //when [space] is pressed...
             if (!isTyping)
             {
+            Debug.Log(currentLine);
                 currentLine += 1; //move to the next line
-                if (currentLine > endAtLine)
+          
+                if (currentLine >endAtLine)
                 { //once you've reached the end of the lines...
                     DisableTextBox();//go to the DisableTextBox
                 }
