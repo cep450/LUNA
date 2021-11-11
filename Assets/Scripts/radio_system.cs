@@ -32,7 +32,7 @@ public class radio_system : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Vector3 mousePos = orth_cam.ScreenToWorldPoint(Input.mousePosition);
        
@@ -44,18 +44,18 @@ public class radio_system : MonoBehaviour
             {
                 if (mousePos.x>Current_mos_x)
                 {
-                    frequency = frequency + 0.3f;
+                    frequency = frequency + 0.3f * Time.deltaTime;
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
-                    dial.transform.Rotate(0,0,1.5f,Space.Self);
+                    dial.transform.Rotate(0,0,-1.5f * Time.deltaTime,Space.Self);
                   //  dial_2.transform.Rotate(0, 0, -1.2f, Space.Self);
                 }
                 if (mousePos.x < Current_mos_x)
                 {
-                    frequency = frequency -0.3f;
+                    frequency = frequency -0.3f * Time.deltaTime;
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
-                    dial.transform.Rotate(0, 0, -1.5f, Space.Self);
+                    dial.transform.Rotate(0, 0, 1.5f * Time.deltaTime, Space.Self);
                    // dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
                 }
 

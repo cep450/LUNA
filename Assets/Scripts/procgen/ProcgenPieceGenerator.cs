@@ -5,12 +5,12 @@ using UnityEngine;
 public class ProcgenPieceGenerator
 {
 
-    public bool generate = false;
+    public bool generate = true;
 
     Procgen procgen;
 
     //first is beginning in sequence, then random middles, then last is end
-    List<Sprite> sprites = new List<Sprite>();
+    public List<Sprite> sprites = new List<Sprite>();
 
     public float initxbaseline;
     public float initxwiggle = 0f;
@@ -33,6 +33,8 @@ public class ProcgenPieceGenerator
     public float clumpwigglex;		    //in sequence, distance apart x 
     public float clumpwiggley;		    //in sequence, distance apart y
     public float clumpwigglez;		    //in sequence, distance apart z
+
+    public bool flipsprite = false;
 
     
     public bool isSequence = false;
@@ -155,6 +157,11 @@ public class ProcgenPieceGenerator
         
         //set the sprite
         obj.GetComponent<SpriteRenderer>().sprite = sprites[spriteindex];
+
+        //flip if needed 
+        if(flipsprite) {
+            obj.GetComponent<SpriteRenderer>().flipX = true;
+        }
 
         //set the parent 
         obj.transform.SetParent(procgen.transform);
