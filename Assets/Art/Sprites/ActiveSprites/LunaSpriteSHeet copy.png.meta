@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 36e98a841f037de41ba6e57c8e7f0ae0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -932027029720399270
+    second: LunaSpriteSHeet copy_0
+  - first:
+      213: 1422378913161827771
+    second: LunaSpriteSHeet copy_1
+  - first:
+      213: -1082365872014097065
+    second: LunaSpriteSHeet copy_2
+  - first:
+      213: 3721885548720000932
+    second: LunaSpriteSHeet copy_3
+  - first:
+      213: 4848568637981962983
+    second: LunaSpriteSHeet copy_4
+  - first:
+      213: -8648681167863830200
+    second: LunaSpriteSHeet copy_5
+  - first:
+      213: 7661609458090372516
+    second: LunaSpriteSHeet copy_6
+  - first:
+      213: -2504676499334930109
+    second: LunaSpriteSHeet copy_7
+  - first:
+      213: 4944816172000453663
+    second: LunaSpriteSHeet copy_8
+  - first:
+      213: -3717023806047993608
+    second: LunaSpriteSHeet copy_9
+  - first:
+      213: -4415911175238641378
+    second: LunaSpriteSHeet copy_10
+  - first:
+      213: 8160167182988364581
+    second: LunaSpriteSHeet copy_11
+  - first:
+      213: -1511905497921763638
+    second: LunaSpriteSHeet copy_12
+  - first:
+      213: 1285062777810507427
+    second: LunaSpriteSHeet copy_13
+  - first:
+      213: -2220919481165855207
+    second: LunaSpriteSHeet copy_14
+  - first:
+      213: -1473007353314970735
+    second: LunaSpriteSHeet copy_15
+  - first:
+      213: -8172539342631589
+    second: LunaSpriteSHeet copy_16
+  - first:
+      213: 1580159530708202073
+    second: LunaSpriteSHeet copy_17
+  - first:
+      213: 6252907711588410099
+    second: LunaSpriteSHeet copy_18
+  - first:
+      213: -7662232627886814444
+    second: LunaSpriteSHeet copy_19
+  - first:
+      213: -7210189766198877438
+    second: LunaSpriteSHeet copy_20
+  - first:
+      213: 2477943534786307692
+    second: LunaSpriteSHeet copy_21
+  - first:
+      213: 1600444505904061672
+    second: LunaSpriteSHeet copy_22
+  - first:
+      213: 1934376823611778607
+    second: LunaSpriteSHeet copy_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 955
+        width: 129
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a520474ca56c013f0800000000000000
+      internalID: -932027029720399270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 984
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5540fd51e4db310800000000000000
+      internalID: 1422378913161827771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 987
+        width: 2
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755089959f9aaf0f0800000000000000
+      internalID: -1082365872014097065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 886
+        width: 170
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af8d1aef2bc6a330800000000000000
+      internalID: 3721885548720000932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 786
+        width: 170
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2b308cc73994340800000000000000
+      internalID: 4848568637981962983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_5
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 729
+        width: 113
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849adddec46b9f780800000000000000
+      internalID: -8648681167863830200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 729
+        width: 113
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adef3d8531835a60800000000000000
+      internalID: 7661609458090372516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_7
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 729
+        width: 113
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3416fd38ef99d3dd0800000000000000
+      internalID: -2504676499334930109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_8
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 729
+        width: 113
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14a1b31c148f9440800000000000000
+      internalID: 4944816172000453663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_9
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 730
+        width: 113
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0c6d2ca8a7a6cc0800000000000000
+      internalID: -3717023806047993608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_10
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 806
+        width: 218
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e191930ce2887b2c0800000000000000
+      internalID: -4415911175238641378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_11
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 920
+        width: 93
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b42d981dcbe3170800000000000000
+      internalID: 8160167182988364581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_12
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 805
+        width: 41
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6c966c5f1a40be0800000000000000
+      internalID: -1511905497921763638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_13
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 493
+        width: 311
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6d871b9c575d110800000000000000
+      internalID: 1285062777810507427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_14
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 421
+        width: 209
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9164d52bf75bd21e0800000000000000
+      internalID: -2220919481165855207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_15
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 368
+        width: 196
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1937f12dd93de8be0800000000000000
+      internalID: -1473007353314970735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_16
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 299
+        width: 20
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dc1976e17f2eff0800000000000000
+      internalID: -8172539342631589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_17
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 3
+        width: 202
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9527f4c98badde510800000000000000
+      internalID: 1580159530708202073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 797
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f227823f6ac6c650800000000000000
+      internalID: 6252907711588410099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_19
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 455
+        width: 363
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b066c65084aa590800000000000000
+      internalID: -7662232627886814444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 460
+        width: 124
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2032f8edb9240fb90800000000000000
+      internalID: -7210189766198877438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 641
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66e964248c636220800000000000000
+      internalID: 2477943534786307692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 199
+        width: 640
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec13217ccbe53610800000000000000
+      internalID: 1600444505904061672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LunaSpriteSHeet copy_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 639
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26e029e87948da10800000000000000
+      internalID: 1934376823611778607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
