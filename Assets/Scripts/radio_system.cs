@@ -15,6 +15,7 @@ public class radio_system : MonoBehaviour
     public GameObject indicator;
     // public AudioClip static_noise;
     private AudioSource radio;
+    public float change_rate;
     public AudioMixer masterMixer;
     public GameObject dial;
    // public GameObject dial_2;
