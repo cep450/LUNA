@@ -2792,10 +2792,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5dba44af7d3747640a6e825027812616, type: 3}
   - {fileID: 8300000, guid: 39095ce598fe475498474dcd5b07abc8, type: 3}
   indicator: {fileID: 1923563037}
-  change_rate: 1
   masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
   dial: {fileID: 1278717880}
   orth_cam: {fileID: 620205571}
+  change_rate: 20
 --- !u!1 &1703235855
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,13 +15,14 @@ public class radio_system : MonoBehaviour
     public GameObject indicator;
     // public AudioClip static_noise;
     private AudioSource radio;
-    public float change_rate;
     public AudioMixer masterMixer;
     public GameObject dial;
    // public GameObject dial_2;
     public Camera orth_cam;
     private int current_song;
     float Current_mos_x = 0.0f;
+    public float change_rate;
+    private float current_frequency;
     public static int current_playlist;
     void Start()
     {
@@ -33,8 +34,9 @@ public class radio_system : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        current_frequency= frequency/((radioclips.Length - 1) * 10 + 5);
         Vector3 mousePos = orth_cam.ScreenToWorldPoint(Input.mousePosition);
        
         if (mouse_click_detector.radio_change_on)
@@ -43,21 +45,24 @@ public class radio_system : MonoBehaviour
             indicator.SetActive(true);
             if (Input.GetMouseButton(0))
             {
+              
                 if (mousePos.x>Current_mos_x)
                 {
-                    frequency = frequency + 0.3f * Time.deltaTime;
+                    frequency = frequency + change_rate*Time.deltaTime;
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
-                    dial.transform.Rotate(0,0,-1.5f * Time.deltaTime,Space.Self);
-                  //  dial_2.transform.Rotate(0, 0, -1.2f, Space.Self);
+                    dial.transform.rotation = Quaternion.Euler(0, 0, -300*current_frequency);
+
                 }
                 if (mousePos.x < Current_mos_x)
                 {
-                    frequency = frequency -0.3f * Time.deltaTime;
+                    frequency = frequency - change_rate*Time.deltaTime;
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
-                    dial.transform.Rotate(0, 0, 1.5f * Time.deltaTime, Space.Self);
-                   // dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
+                    dial.transform.rotation = Quaternion.Euler(0, 0, -300 * current_frequency);
+
+                    //  dial.transform.Rotate(0, 0, -1.5f, Space.Self);
+                    // dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
                 }
 
             }
@@ -67,7 +72,7 @@ public class radio_system : MonoBehaviour
         }
 
        // Debug.Log(0.55f + ((1.78f - 0.55f) * frequency / ((radioclips.Length - 1) * 10 + 5)));
-        indicator.transform.position = new Vector3(0.55f+((1.85f-0.55f)*frequency/( (radioclips.Length - 1) * 10 + 5)), indicator.transform.position.y,indicator.transform.position.z);
+        indicator.transform.position = new Vector3(0.55f+((1.85f-0.55f)*current_frequency), indicator.transform.position.y,indicator.transform.position.z);
         if (frequency < 0)
         {
             frequency = 0;
