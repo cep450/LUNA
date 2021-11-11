@@ -653,8 +653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radio: {fileID: 2020706184}
-  radio_normal: {fileID: -8598057804978905551, guid: 1d494f03bba782d4cb4dc4bd526e53bb, type: 3}
-  radio_hover: {fileID: 6671279368078078362, guid: 7c0f31d8bd474fe4f8709f55179923ed, type: 3}
+  radio_normal: {fileID: 3721885548720000932, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
+  radio_hover: {fileID: 4848568637981962983, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
