@@ -47,18 +47,18 @@ public class Procgen : MonoBehaviour
     public Sprite spr_brokencar;
         */
 
-        ProcgenPieceGenerator speedsign = new ProcgenPieceGenerator(spr_speedsign, 10, -3, 200, 250, this);
+        ProcgenPieceGenerator speedsign = new ProcgenPieceGenerator(spr_speedsign, 10, -4.1f, 300, 250, this);
         speedsign.genapartwiggle = 25;
         generators.Add(speedsign);
 
-        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 15, 200, 50, this);
+        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 15, 300, 50, this);
         birds.genapartwiggle = 20;
         birds.initxwiggle = 100;
         birds.initywiggle = 10;
         birds.genapartwiggle = 40;
         generators.Add(birds);
 
-        ProcgenPieceGenerator trees = new ProcgenPieceGenerator(spr_tree1, 50, -4, 200, 150, this);
+        ProcgenPieceGenerator trees = new ProcgenPieceGenerator(spr_tree1, 50, -4.1f, 300, 150, this);
         trees.clumpsizemax = 8;
         trees.clumpsizemin = 1;
         trees.clumpwigglex = 10;
@@ -76,7 +76,7 @@ public class Procgen : MonoBehaviour
         treesLeft.flipsprite = true;
         generators.Add(treesLeft);
 
-        ProcgenPieceGenerator guardrail = new ProcgenPieceGenerator(spr_guardrail, 10, -3, 200, 50, this);
+        ProcgenPieceGenerator guardrail = new ProcgenPieceGenerator(spr_guardrail, 10, -4.1f, 300, 50, this);
         guardrail.genapartwiggle = 20;
         generators.Add(guardrail);
 
