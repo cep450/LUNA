@@ -1329,10 +1329,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squareexamplesprite: {fileID: 7482667652216324306, guid: 439e745a5fb50a448bdc416685a2f3e6, type: 3}
-  spr_speedsign: {fileID: 21300000, guid: 830f64b13c007444a81c8bbf7d2cff57, type: 3}
-  spr_birds: {fileID: -3043212234144720249, guid: d636920613c352947814c4065079d7e2, type: 3}
-  spr_tree: {fileID: 21300000, guid: 319450bd32d7bc843b9f549cd5af8001, type: 3}
-  spr_brokencar: {fileID: 21300000, guid: 2cf2c2dd04a62494bbdd0b8b68f84253, type: 3}
+  spr_speedsign: {fileID: -1511905497921763638, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
+  spr_birds: {fileID: -8648681167863830200, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
+  spr_tree1: {fileID: -4415911175238641378, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
+  spr_tree2: {fileID: 1285062777810507427, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
+  spr_guardrail: {fileID: 8160167182988364581, guid: 36e98a841f037de41ba6e57c8e7f0ae0, type: 3}
   spritePrefab: {fileID: 4030381773979230160, guid: a87f259604aff48478a72e8ba85841a1, type: 3}
   car: {fileID: 1131936759}
 --- !u!4 &961524415

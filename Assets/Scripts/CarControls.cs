@@ -19,7 +19,7 @@ can also control audio related to the car's speed
     float acceleration = 2f;
     float deceleration = 2f;
 
-    float maxvelocity = 30f;
+    float maxvelocity = 35f;
     float baseline = 20f;
     float minvelocity = 5f;
 
