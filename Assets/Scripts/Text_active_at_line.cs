@@ -15,12 +15,15 @@ public class Text_active_at_line : MonoBehaviour
     private int current_text_file = 1;
     public GameObject button;
 
+    public TextAsset[] fakechoice;
+
     public TextBoxManager theTextBox;
 
     public bool destroyWhenActivated;
     public bool requireButtonPress;
     public bool toBeTriggered;
     private bool waitForPress;
+  
 
     void Start()
     {
@@ -48,40 +51,64 @@ public class Text_active_at_line : MonoBehaviour
         if (TextBoxManager.text_end==true)
         {
           
+
             button.SetActive(false);
-            if (current_text_file == 1 && radio_system.current_playlist == 0)
-            {
-        
-               
+            if (radio_system.song_stay_same) {
+
+                if (current_text_file == 1 && radio_system.current_playlist == 1)
+                {
+
+
                     theText = Text2;
-                endLine = 17;
-                Reload();
+                    endLine = 17;
+                    Reload();
                     current_text_file = 2;
-                    
-                TextBoxManager.text_end = false;
 
-            }
-            if (current_text_file == 2 && radio_system.current_playlist == 4)
-            {
+                    TextBoxManager.text_end = false;
+
+                }
+                else {
+                    fake_choice(radio_system.current_playlist);
+                    radio_system.song_stay_same = false;
 
 
-                endLine = 16;
-                theText = Text3;
+                }
+                if (current_text_file == 2 && radio_system.current_playlist == 5)
+                {
+
+
+                    endLine = 16;
+                    theText = Text3;
                     Reload();
                     current_text_file = 3;
-                TextBoxManager.text_end = false;
-             
-            }
-            if (current_text_file == 3 && radio_system.current_playlist == 6)
-            {
+                    TextBoxManager.text_end = false;
+
+                }
+                else
+                {
+                    fake_choice(radio_system.current_playlist);
+                    radio_system.song_stay_same = false;
 
 
-                endLine = 7;
-                theText = Text4;
-                Reload();
-                current_text_file = 4;
-                TextBoxManager.text_end = false;
+                }
+                if (current_text_file == 3 && radio_system.current_playlist == 10)
+                {
 
+
+                    endLine = 7;
+                    theText = Text4;
+                    Reload();
+                    current_text_file = 4;
+                    TextBoxManager.text_end = false;
+
+                }
+                else
+                {
+                    fake_choice(radio_system.current_playlist);
+                    radio_system.song_stay_same = false;
+
+
+                }
             }
 
         }
@@ -103,7 +130,15 @@ public class Text_active_at_line : MonoBehaviour
                     Destroy(gameObject);
                 }
       }
+   
+    void fake_choice(int song_order) {
 
+        endLine = 0;
+        theText = fakechoice[song_order];
+        Reload();
+    
+
+    }
             // if(requireButtonPress){
             //     waitForPress = true;
             //     return;
