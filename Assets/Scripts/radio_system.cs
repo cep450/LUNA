@@ -130,6 +130,7 @@ public class radio_system : MonoBehaviour
         changed_song = frequency;
         song_changed = true;
         radio.clip = radioclips[frequency];
+        radio.time = Mathf.Repeat(Time.realtimeSinceStartup, radio.clip.length); //position in the song as if it were looping in the background (roughly) -jaden
         radio.Play(0);
         current_song = frequency;
         song_stay_same = false;
