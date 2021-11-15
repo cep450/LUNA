@@ -248,10 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1b95d97aeab342b04ee5f9fe3f89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text1: {fileID: 4900000, guid: 91d6707b57607674ab73b808827f4af1, type: 3}
-  Text2: {fileID: 4900000, guid: 48be0d7f9a67c3f42aef38972bacf281, type: 3}
-  Text3: {fileID: 4900000, guid: 0c9879f331ccd0245b39951bfcfa4497, type: 3}
-  Text4: {fileID: 4900000, guid: 153427052319a1d44a7b5684aea48194, type: 3}
+  Text1: {fileID: 4900000, guid: 696f1fa5a2ee35a4cb7a0f20cb690371, type: 3}
+  Text2: {fileID: 4900000, guid: 1d982be291be7f64ba0bac5042100f03, type: 3}
+  Text3: {fileID: 4900000, guid: 0077703b98bff86489f46224de11cf3d, type: 3}
+  Text4: {fileID: 4900000, guid: a38b6052096ec104991e475f241a0bfd, type: 3}
   startLine: 0
   endLine: 21
   button: {fileID: 1165813381}
@@ -269,9 +269,9 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 990196f7f4fb8dd49a7e7c4d124b84f6, type: 3}
   - {fileID: 4900000, guid: 51bb43d44f64d2945aa6393cb7f5b452, type: 3}
   - {fileID: 4900000, guid: 1c66f8d38046d5b4995ef3a4441143c5, type: 3}
-  - {fileID: 0}
+  - {fileID: 4900000, guid: 0c4d235881c548f4f85c0785f03ac65e, type: 3}
   - {fileID: 4900000, guid: 43bc8f7fdf670bd459c52ea53f313c72, type: 3}
-  - {fileID: 0}
+  - {fileID: 4900000, guid: fa08ac1836f44644db8f7f0e905f3375, type: 3}
   - {fileID: 4900000, guid: b39fded8e67008c488d360858fac487c, type: 3}
   theTextBox: {fileID: 139203984}
   destroyWhenActivated: 0
@@ -2436,8 +2436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You used to talk about stealing a truck and driving off down the I-90 with
-    this kind of music playing.
+  m_Text: 
 --- !u!222 &1359640296
 CanvasRenderer:
   m_ObjectHideFlags: 0

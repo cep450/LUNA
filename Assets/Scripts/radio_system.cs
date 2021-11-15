@@ -26,6 +26,7 @@ public class radio_system : MonoBehaviour
     public static int current_playlist;
     bool song_changed;
     int changed_song;
+    bool wait=false;
     public static bool song_stay_same = false;
    
     void Start()
@@ -41,10 +42,12 @@ public class radio_system : MonoBehaviour
     void FixedUpdate()
     {
        
-        if (song_changed&& TextBoxManager.text_end)
+        if (song_changed && TextBoxManager.text_end)
         {
+            Debug.Log("test!!!");
             song_changed = false;
-         
+            song_stay_same = false;
+            wait = false;
             StartCoroutine(waitforseconds());
         }
         current_frequency = frequency / ((radioclips.Length - 1) * 10 + 5);
@@ -154,10 +157,10 @@ public class radio_system : MonoBehaviour
     {
 
         // Move the first cube up or down.
-        Debug.Log("test");
 
+    
         yield return new WaitForSeconds(3.5f);
-
+        wait = true;
         if (changed_song == current_playlist)
         {
             song_stay_same = true;
