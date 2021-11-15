@@ -23,6 +23,8 @@ public class Text_active_at_line : MonoBehaviour
     public bool requireButtonPress;
     public bool toBeTriggered;
     private bool waitForPress;
+
+    public TextAsset thx4playing;
   
 
     void Start()
