@@ -134,7 +134,6 @@ public class radio_system : MonoBehaviour
     {
         SetSound(Mathf.Abs((frequency % 10) - 5));
         SetMainSound(Mathf.Abs((frequency % 10) - 5));
-        //Debug.Log((frequency % 10) - 5);
 
     }
 
