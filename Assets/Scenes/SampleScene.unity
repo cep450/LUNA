@@ -248,10 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1b95d97aeab342b04ee5f9fe3f89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text1: {fileID: 4900000, guid: 91d6707b57607674ab73b808827f4af1, type: 3}
-  Text2: {fileID: 4900000, guid: 48be0d7f9a67c3f42aef38972bacf281, type: 3}
-  Text3: {fileID: 4900000, guid: 0c9879f331ccd0245b39951bfcfa4497, type: 3}
-  Text4: {fileID: 4900000, guid: 153427052319a1d44a7b5684aea48194, type: 3}
+  Text1: {fileID: 4900000, guid: 696f1fa5a2ee35a4cb7a0f20cb690371, type: 3}
+  Text2: {fileID: 4900000, guid: 1d982be291be7f64ba0bac5042100f03, type: 3}
+  Text3: {fileID: 4900000, guid: 0077703b98bff86489f46224de11cf3d, type: 3}
+  Text4: {fileID: 4900000, guid: a38b6052096ec104991e475f241a0bfd, type: 3}
   startLine: 0
   endLine: 21
   button: {fileID: 1165813381}
@@ -2437,8 +2437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You used to talk about stealing a truck and driving off down the I-90 with
-    this kind of music playing.
+  m_Text: 
 --- !u!222 &1359640296
 CanvasRenderer:
   m_ObjectHideFlags: 0
