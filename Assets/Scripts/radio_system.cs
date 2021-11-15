@@ -113,16 +113,7 @@ public class radio_system : MonoBehaviour
         }
 
     }
-    public void SetSound(float soundLevel)
-    {
-
-        masterMixer.SetFloat("SFX_VOL", 4 * soundLevel - 30);
-    }
-    public void SetMainSound(float soundLevel)
-    {
-
-        masterMixer.SetFloat("Main_VOL", -5 * soundLevel);
-    }
+    
     void change_music_play(int frequency)
     {
         Debug.Log(frequency);
@@ -138,8 +129,23 @@ public class radio_system : MonoBehaviour
 
     void set_volume(float frequency)
     {
-        SetSound(Mathf.Abs(frequency % 10 - 5));
-        SetMainSound(Mathf.Abs(frequency % 10 - 5));
+        SetSound(Mathf.Abs((frequency % 10) - 5));
+        SetMainSound(Mathf.Abs((frequency % 10) - 5));
+        //Debug.Log((frequency % 10) - 5);
+
+    }
+
+    public void SetSound(float soundLevel)
+    {
+
+        //masterMixer.SetFloat("SFX_VOL", 4 * soundLevel - 30);
+        masterMixer.SetFloat("SFX_VOL", (-7 * soundLevel) - 2);
+    }
+    public void SetMainSound(float soundLevel)
+    {
+
+        //masterMixer.SetFloat("Main_VOL", -5 * soundLevel);
+        masterMixer.SetFloat("RADIO_VOL", (4 * soundLevel) - 22);
     }
 
     IEnumerator waitforseconds()
