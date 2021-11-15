@@ -58,7 +58,9 @@ public class Text_active_at_line : MonoBehaviour
             button.SetActive(false);
             if (radio_system.song_stay_same) {
 
-                if (current_text_file == 1 && radio_system.current_playlist == 1)
+                if (current_text_file == 1 && 
+                    (radio_system.current_playlist == 1 || radio_system.current_playlist == 4 ||
+                    radio_system.current_playlist == 10 || radio_system.current_playlist == 13))
                 {
 
 
@@ -66,8 +68,8 @@ public class Text_active_at_line : MonoBehaviour
                     endLine = 17;
                     Reload();
                     current_text_file = 2;
-
                     TextBoxManager.text_end = false;
+                    
 
                 }
                 else {
@@ -76,9 +78,11 @@ public class Text_active_at_line : MonoBehaviour
 
 
                 }
-                if (current_text_file == 2 && radio_system.current_playlist == 5)
+                if (current_text_file == 2 && 
+                    (radio_system.current_playlist == 5 || radio_system.current_playlist == 6 ||
+                    radio_system.current_playlist == 15 || radio_system.current_playlist == 2 ||
+                    radio_system.current_playlist == 11))
                 {
-
 
                     endLine = 16;
                     theText = Text3;
@@ -94,7 +98,9 @@ public class Text_active_at_line : MonoBehaviour
 
 
                 }
-                if (current_text_file == 3 && radio_system.current_playlist == 10)
+                if (current_text_file == 3 &&
+                    (radio_system.current_playlist == 1 || radio_system.current_playlist == 3 ||
+                    radio_system.current_playlist == 4 || radio_system.current_playlist == 13))
                 {
 
 

@@ -39,6 +39,11 @@ public class ProcgenPieceGenerator
     
     public bool isSequence = false;
 
+    public float scale = 1;
+
+    public bool isAnimation = false;
+    public AnimationClip animation;
+
 
     //these are basically constructors, it's just not good to use constructors with monobehaviors or something 
     //TODO nvm making this not a monobehavior it can just be a class. could bring back constructors if i wanted! 
@@ -155,13 +160,23 @@ public class ProcgenPieceGenerator
         //instantiate procgen.spritePrefab at xyz 
         GameObject obj = Object.Instantiate(procgen.spritePrefab, new Vector3(x, y, z), Quaternion.identity);
         
-        //set the sprite
-        obj.GetComponent<SpriteRenderer>().sprite = sprites[spriteindex];
 
-        //flip if needed 
-        if(flipsprite) {
-            obj.GetComponent<SpriteRenderer>().flipX = true;
+        //set the sprite
+        if(isAnimation) {
+            obj.GetComponent<Animation>().clip = animation;
+        } else {
+            obj.GetComponent<Animation>().enabled = false;
+            obj.GetComponent<SpriteRenderer>().sprite = sprites[spriteindex];
+
+            //flip if needed 
+            if(flipsprite) {
+                obj.GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
+        
+        
+
+        obj.transform.localScale = obj.transform.localScale * scale;
 
         //set the parent 
         obj.transform.SetParent(procgen.transform);
