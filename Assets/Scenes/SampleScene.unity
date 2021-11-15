@@ -2814,7 +2814,7 @@ MonoBehaviour:
   masterMixer: {fileID: 24100000, guid: eeca983819a62ac4bab8c834875d5622, type: 2}
   dial: {fileID: 1278717880}
   orth_cam: {fileID: 620205571}
-  change_rate: 20
+  change_rate: 5
 --- !u!1 &1703235855
 GameObject:
   m_ObjectHideFlags: 0

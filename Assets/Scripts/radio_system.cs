@@ -57,15 +57,16 @@ public class radio_system : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
 
-                if (mousePos.x > Current_mos_x)
+                if (mousePos.x > Current_mos_x || mousePos.x < Current_mos_x)
                 {
-                    frequency = frequency + change_rate * Time.deltaTime;
+                    //frequency = frequency + change_rate * Time.deltaTime;
+                    frequency = frequency + change_rate * (mousePos.x - Current_mos_x);
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
                     dial.transform.rotation = Quaternion.Euler(0, 0, -300 * current_frequency);
 
                 }
-                if (mousePos.x < Current_mos_x)
+                /*if (mousePos.x < Current_mos_x)
                 {
                     frequency = frequency - change_rate * Time.deltaTime;
                     set_volume(frequency);
@@ -74,8 +75,10 @@ public class radio_system : MonoBehaviour
 
                     //  dial.transform.Rotate(0, 0, -1.5f, Space.Self);
                     // dial_2.transform.Rotate(0, 0, 1.2f, Space.Self);
-                }
+                }*/
 
+            } else {
+                Current_mos_x = mousePos.x;
             }
         }
         else
@@ -139,7 +142,7 @@ public class radio_system : MonoBehaviour
     {
 
         //masterMixer.SetFloat("SFX_VOL", 4 * soundLevel - 30);
-        masterMixer.SetFloat("SFX_VOL", (-7 * soundLevel) - 2);
+        masterMixer.SetFloat("SFX_VOL", (-6 * soundLevel) - 2);
     }
     public void SetMainSound(float soundLevel)
     {
