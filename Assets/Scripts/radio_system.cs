@@ -141,7 +141,7 @@ public class radio_system : MonoBehaviour
     {
 
         //masterMixer.SetFloat("SFX_VOL", 4 * soundLevel - 30);
-        masterMixer.SetFloat("SFX_VOL", (-6 * soundLevel) - 2);
+        masterMixer.SetFloat("SFX_VOL", (-6 * soundLevel) - 3);
     }
     public void SetMainSound(float soundLevel)
     {
