@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-4308649987957145780
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 6bf3a24178b708849a48e9ec2499050d
+  m_EffectName: Attenuation
+  m_MixLevel: 8247935ff0a316f46bda9828f6adfdae
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-2785022006022881958
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -16,6 +30,25 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 6625923765368034106}
   m_UserColorIndex: 3
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-1285737153849993002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RADIO
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 3765b63252e733144abdcde4847a7784
+  m_Children: []
+  m_Volume: 6c9f2c3201e8d8344afaea0c8aa2a785
+  m_Pitch: af734ec610e690f4bb2e5b286d4458e6
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -4308649987957145780}
+  m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -37,12 +70,15 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 6342d93c3fe5821428a5c420361df5fa
     name: Main_VOL
+  - guid: 6c9f2c3201e8d8344afaea0c8aa2a785
+    name: RADIO_VOL
   - guid: de237b2baa4933845b326b164c4a4f2d
     name: SFX_VOL
   m_AudioMixerGroupViews:
   - guids:
     - 632d22296f922414cb448203204afced
     - 8fdf1e17379ba8c4984b48923903ec14
+    - 3765b63252e733144abdcde4847a7784
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -57,6 +93,7 @@ AudioMixerGroupController:
   m_GroupID: 632d22296f922414cb448203204afced
   m_Children:
   - {fileID: -2785022006022881958}
+  - {fileID: -1285737153849993002}
   m_Volume: 6342d93c3fe5821428a5c420361df5fa
   m_Pitch: 22525676d769d5246a09f1681e3f450a
   m_Send: 00000000000000000000000000000000

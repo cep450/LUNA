@@ -23,6 +23,9 @@ public class Text_active_at_line : MonoBehaviour
     public bool requireButtonPress;
     public bool toBeTriggered;
     private bool waitForPress;
+
+    public TextAsset thx4playing;
+    public FadeInAtEnd endCutscene;
   
 
     void Start()
@@ -106,6 +109,27 @@ public class Text_active_at_line : MonoBehaviour
                 {
                     fake_choice(radio_system.current_playlist);
                     radio_system.song_stay_same = false;
+
+
+                }
+
+                //ending- when #4 ends- 
+                if(current_text_file == 4) {
+
+                    //start the ending coroutine if it isn't running already 
+                    if(!endCutscene.hasStarted) {
+                        StartCoroutine(endCutscene.ShowEndScreen());
+                    }
+                
+                    //when the coroutine is done 
+                    //play the "thanks for playing"
+                    if(endCutscene.hasEnded) {
+                        endLine = 1;
+                        theText = thx4playing;
+                        Reload();
+                        current_text_file = 5;
+                        TextBoxManager.text_end = false;
+                    }
 
 
                 }
