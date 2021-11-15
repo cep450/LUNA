@@ -145,7 +145,7 @@ public class radio_system : MonoBehaviour
     {
 
         //masterMixer.SetFloat("Main_VOL", -5 * soundLevel);
-        masterMixer.SetFloat("RADIO_VOL", (4 * soundLevel) - 22);
+        masterMixer.SetFloat("RADIO_VOL", (4 * soundLevel) - 25);
     }
 
     IEnumerator waitforseconds()
