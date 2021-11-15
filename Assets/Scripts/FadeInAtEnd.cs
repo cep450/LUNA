@@ -12,6 +12,8 @@ public class FadeInAtEnd : MonoBehaviour
 
         hasStarted = true;
 
+        Debug.Log("HELLO");
+
         //some delay- other text wouldve just appeared i think 
         //pause/hold 
         for(float i = 0; i < 4; i += Time.deltaTime) {

@@ -66,20 +66,15 @@ public class Text_active_at_line : MonoBehaviour
                   
 
                     theText = Text2;
-                    endLine = 17;
+                    endLine = 18;
                     Reload();
                     current_text_file = 2;
                     TextBoxManager.text_end = false;
+                    radio_system.song_stay_same = false;
                     
 
                 }
-                else {
-                    fake_choice(radio_system.current_playlist);
-                    radio_system.song_stay_same = false;
-
-
-                }
-                if (current_text_file == 2 && 
+                else if (current_text_file == 2 && 
                     (radio_system.current_playlist == 5 || radio_system.current_playlist == 6 ||
                     radio_system.current_playlist == 15 || radio_system.current_playlist == 2 ||
                     radio_system.current_playlist == 11))
@@ -91,15 +86,10 @@ public class Text_active_at_line : MonoBehaviour
                     Reload();
                     current_text_file = 3;
                     TextBoxManager.text_end = false;
+                    radio_system.song_stay_same = false;
 
                 }
-                
-                else if (current_text_file == 3 && radio_system.current_playlist == 10)
-                {
-
-
-                }
-                if (current_text_file == 3 &&
+                else if (current_text_file == 3 &&
                     (radio_system.current_playlist == 1 || radio_system.current_playlist == 3 ||
                     radio_system.current_playlist == 4 || radio_system.current_playlist == 13))
                 {
@@ -110,11 +100,14 @@ public class Text_active_at_line : MonoBehaviour
                     Reload();
                     current_text_file = 4;
                     TextBoxManager.text_end = false;
+                    radio_system.song_stay_same = false;
 
                 }
                 //ending- when #4 ends- 
                else if (current_text_file == 4)
                 {
+
+                    Debug.Log("got here");
 
                     //start the ending coroutine if it isn't running already 
                     if (!endCutscene.hasStarted)
@@ -131,12 +124,12 @@ public class Text_active_at_line : MonoBehaviour
                         Reload();
                         current_text_file = 5;
                         TextBoxManager.text_end = false;
+                        radio_system.song_stay_same = false;
                     }
 
 
                 }
                 else
-
                 {
                     radio_system.song_stay_same = false;
                     fake_choice(radio_system.current_playlist);

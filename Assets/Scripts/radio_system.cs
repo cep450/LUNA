@@ -66,7 +66,7 @@ public class radio_system : MonoBehaviour
                     frequency = frequency + change_rate * (mousePos.x - Current_mos_x);
                     set_volume(frequency);
                     Current_mos_x = mousePos.x;
-                    dial.transform.rotation = Quaternion.Euler(0, 0, -300 * current_frequency);
+                    dial.transform.rotation = Quaternion.Euler(0, 0, -250 * current_frequency + 130);
 
                 }
                 /*if (mousePos.x < Current_mos_x)
@@ -159,7 +159,7 @@ public class radio_system : MonoBehaviour
         // Move the first cube up or down.
 
     
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(4f);
         wait = true;
         if (changed_song == current_playlist)
         {
