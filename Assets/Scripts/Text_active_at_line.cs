@@ -51,50 +51,47 @@ public class Text_active_at_line : MonoBehaviour
 
     void Update()
     {
+        
         if (TextBoxManager.text_end==true)
         {
-          
-
+         
             button.SetActive(false);
-            if (radio_system.song_stay_same) {
+            if (radio_system.song_stay_same) 
+            {
 
-                if (current_text_file == 1 && radio_system.current_playlist == 1)
+                if (current_text_file == 1 && 
+                    (radio_system.current_playlist == 1 || radio_system.current_playlist == 4 ||
+                    radio_system.current_playlist == 10 || radio_system.current_playlist == 13))
                 {
-
+                  
 
                     theText = Text2;
-                    endLine = 17;
+                    endLine = 18;
                     Reload();
                     current_text_file = 2;
-
                     TextBoxManager.text_end = false;
-
-                }
-                else {
-                    fake_choice(radio_system.current_playlist);
                     radio_system.song_stay_same = false;
-
+                    
 
                 }
-                if (current_text_file == 2 && radio_system.current_playlist == 5)
+                else if (current_text_file == 2 && 
+                    (radio_system.current_playlist == 5 || radio_system.current_playlist == 6 ||
+                    radio_system.current_playlist == 15 || radio_system.current_playlist == 2 ||
+                    radio_system.current_playlist == 11))
                 {
 
 
-                    endLine = 16;
+                    endLine = 17;
                     theText = Text3;
                     Reload();
                     current_text_file = 3;
                     TextBoxManager.text_end = false;
-
-                }
-                else
-                {
-                    fake_choice(radio_system.current_playlist);
                     radio_system.song_stay_same = false;
 
-
                 }
-                if (current_text_file == 3 && radio_system.current_playlist == 10)
+                else if (current_text_file == 3 &&
+                    (radio_system.current_playlist == 1 || radio_system.current_playlist == 3 ||
+                    radio_system.current_playlist == 4 || radio_system.current_playlist == 13))
                 {
 
 
@@ -103,37 +100,54 @@ public class Text_active_at_line : MonoBehaviour
                     Reload();
                     current_text_file = 4;
                     TextBoxManager.text_end = false;
-
-                }
-                else
-                {
-                    fake_choice(radio_system.current_playlist);
                     radio_system.song_stay_same = false;
 
+                }
+                
+                else
+                {
+                    radio_system.song_stay_same = false;
+                    fake_choice(radio_system.current_playlist);
+
+                    Debug.Log(radio_system.song_stay_same);
 
                 }
 
-                //ending- when #4 ends- 
+
+                
+
+              
+            }
+
+            //ending- when #4 ends- 
                 if(current_text_file == 4) {
+                    Debug.Log(theTextBox.currentLine + "box");
+                }
+               if (current_text_file == 4 && theTextBox.currentLine >= 5)
+                {
+
+                    Debug.Log("got here");
 
                     //start the ending coroutine if it isn't running already 
-                    if(!endCutscene.hasStarted) {
+                    if (!endCutscene.hasStarted)
+                    {
                         StartCoroutine(endCutscene.ShowEndScreen());
                     }
-                
+
                     //when the coroutine is done 
                     //play the "thanks for playing"
-                    if(endCutscene.hasEnded) {
+                    if (endCutscene.hasEnded)
+                    {
                         endLine = 1;
                         theText = thx4playing;
                         Reload();
                         current_text_file = 5;
                         TextBoxManager.text_end = false;
+                        radio_system.song_stay_same = false;
                     }
 
 
                 }
-            }
 
         }
     }
@@ -145,22 +159,17 @@ public class Text_active_at_line : MonoBehaviour
                 theTextBox.endAtLine = endLine;
                 theTextBox.EnableTextBox();
         button.SetActive(true);
-        //stop rat chasing
+       
         Debug.Log("reload");
-        button.SetActive(true);
-                if (destroyWhenActivated)
-                {
-                    Debug.Log("Destroying");
-                    Destroy(gameObject);
-                }
+    
+            
       }
    
     void fake_choice(int song_order) {
-
-        endLine = 0;
         theText = fakechoice[song_order];
+        endLine = 0;
         Reload();
-    
+        TextBoxManager.text_end = false;
 
     }
             // if(requireButtonPress){

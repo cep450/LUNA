@@ -14,6 +14,7 @@ public class Procgen : MonoBehaviour
     public Sprite spr_tree1;
     public Sprite spr_tree2;
     public Sprite spr_guardrail;
+    public AnimationClip birdsanim;
 
 
     List<ProcgenPieceGenerator> generators = new List<ProcgenPieceGenerator>();
@@ -51,11 +52,14 @@ public class Procgen : MonoBehaviour
         speedsign.genapartwiggle = 25;
         generators.Add(speedsign);
 
-        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 15, 300, 50, this);
+        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 30, 300, 100, this);
         birds.genapartwiggle = 20;
         birds.initxwiggle = 100;
         birds.initywiggle = 10;
         birds.genapartwiggle = 40;
+        birds.scale = 2;
+        birds.isAnimation = true;
+        birds.animation = birdsanim;
         generators.Add(birds);
 
         ProcgenPieceGenerator trees = new ProcgenPieceGenerator(spr_tree1, 50, -4.1f, 300, 150, this);

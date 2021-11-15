@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkyMove : MonoBehaviour
 {
 
-    float rate = 0.15f;
+    float rate = 0.2f;
     //float max = -1f;
 
     public bool skyforever;
