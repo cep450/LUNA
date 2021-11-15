@@ -278,7 +278,7 @@ MonoBehaviour:
   requireButtonPress: 0
   toBeTriggered: 1
   thx4playing: {fileID: 4900000, guid: 4a34b9bb97a1a9746bd6d31dc8f073b4, type: 3}
-  endCutscene: {fileID: 0}
+  endCutscene: {fileID: 1180811119}
 --- !u!4 &121711461
 Transform:
   m_ObjectHideFlags: 0
