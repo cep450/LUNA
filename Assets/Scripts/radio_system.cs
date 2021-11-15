@@ -159,7 +159,7 @@ public class radio_system : MonoBehaviour
         // Move the first cube up or down.
 
     
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5f);
         wait = true;
         if (changed_song == current_playlist)
         {

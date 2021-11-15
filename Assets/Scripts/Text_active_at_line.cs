@@ -95,7 +95,7 @@ public class Text_active_at_line : MonoBehaviour
                 {
 
 
-                    endLine = 6;
+                    endLine = 7;
                     theText = Text4;
                     Reload();
                     current_text_file = 4;
@@ -103,8 +103,27 @@ public class Text_active_at_line : MonoBehaviour
                     radio_system.song_stay_same = false;
 
                 }
-                //ending- when #4 ends- 
-               else if (current_text_file == 4)
+                
+                else
+                {
+                    radio_system.song_stay_same = false;
+                    fake_choice(radio_system.current_playlist);
+
+                    Debug.Log(radio_system.song_stay_same);
+
+                }
+
+
+                
+
+              
+            }
+
+            //ending- when #4 ends- 
+                if(current_text_file == 4) {
+                    Debug.Log(theTextBox.currentLine + "box");
+                }
+               if (current_text_file == 4 && theTextBox.currentLine >= 5)
                 {
 
                     Debug.Log("got here");
@@ -129,17 +148,6 @@ public class Text_active_at_line : MonoBehaviour
 
 
                 }
-                else
-                {
-                    radio_system.song_stay_same = false;
-                    fake_choice(radio_system.current_playlist);
-
-                    Debug.Log(radio_system.song_stay_same);
-
-                }
-
-              
-            }
 
         }
     }
