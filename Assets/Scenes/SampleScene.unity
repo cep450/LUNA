@@ -256,7 +256,7 @@ MonoBehaviour:
   endLine: 21
   button: {fileID: 1165813381}
   fakechoice:
-  - {fileID: 0}
+  - {fileID: 4900000, guid: b39fded8e67008c488d360858fac487c, type: 3}
   - {fileID: 4900000, guid: d90d273054d38f849a9475b0bc0434b8, type: 3}
   - {fileID: 4900000, guid: eab213e1925765c4aaa7e65051179b68, type: 3}
   - {fileID: 4900000, guid: 2f9e2981aa567b14ab43ee00be29d486, type: 3}
@@ -272,12 +272,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 4900000, guid: 43bc8f7fdf670bd459c52ea53f313c72, type: 3}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4900000, guid: b39fded8e67008c488d360858fac487c, type: 3}
   theTextBox: {fileID: 139203984}
   destroyWhenActivated: 0
   requireButtonPress: 0
   toBeTriggered: 1
   thx4playing: {fileID: 4900000, guid: 4a34b9bb97a1a9746bd6d31dc8f073b4, type: 3}
+  endCutscene: {fileID: 0}
 --- !u!4 &121711461
 Transform:
   m_ObjectHideFlags: 0
@@ -1299,7 +1300,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 8a62c99965446084fa7850e3cbd15fa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdb7775c24a0c66408d6c36463049884, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1318,7 +1319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817108979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -157.7, y: 79.7, z: 250}
+  m_LocalPosition: {x: -218.5, y: 109.3, z: 250}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2093,6 +2094,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ed3c89006a87643b4c31c8b08c13c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasStarted: 0
+  hasEnded: 0
 --- !u!1 &1273331509
 GameObject:
   m_ObjectHideFlags: 0

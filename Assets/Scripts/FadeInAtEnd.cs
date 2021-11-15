@@ -5,11 +5,18 @@ using UnityEngine;
 public class FadeInAtEnd : MonoBehaviour
 {
 
-    void Start() {
-        //StartCoroutine(ShowEndScreen());
-    }
+    public bool hasStarted = false;
+    public bool hasEnded = false;
 
     public IEnumerator ShowEndScreen() {
+
+        hasStarted = true;
+
+        //some delay- other text wouldve just appeared i think 
+        //pause/hold 
+        for(float i = 0; i < 4; i += Time.deltaTime) {
+            yield return null;
+        }
         
         //fade to end screen 
         for (float f = 0f; f <= 1; f += Time.deltaTime * 0.4f){
@@ -31,6 +38,7 @@ public class FadeInAtEnd : MonoBehaviour
             yield return null;
         }
 
-        //TODO show thanks for playing text 
+        //tell other script to show thanks for playing text 
+        hasEnded = true;
     }
 }
