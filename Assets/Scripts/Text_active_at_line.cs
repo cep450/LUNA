@@ -104,7 +104,7 @@ public class Text_active_at_line : MonoBehaviour
 
                 }
                 
-                else
+                else if(current_text_file < 4 && theText != fakechoice[radio_system.current_playlist])
                 {
                     radio_system.song_stay_same = false;
                     fake_choice(radio_system.current_playlist);
@@ -112,9 +112,6 @@ public class Text_active_at_line : MonoBehaviour
                     Debug.Log(radio_system.song_stay_same);
 
                 }
-
-
-                
 
               
             }
