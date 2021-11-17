@@ -96,10 +96,23 @@ public class Procgen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //for each child (generated object)...
+        for(int i = 0; i < transform.childCount; i++) {
+
+            //move the child by velocity 
+            transform.GetChild(i).Translate(Vector3.back * car.getVelocity() * Time.deltaTime);
+
+            //if any move past the limit, cull them 
+            tryCullChild(i);
+        }
         
         //move self by velocity 
-        transform.Translate(Vector3.back * car.getVelocity() * Time.deltaTime);
+        //transform.Translate(Vector3.back * car.getVelocity() * Time.deltaTime);
+        
+        //move children by velocity 
 
+/*
         //check if past limit, move back to 0,0 if so 
         if(transform.position.z < zerozeroLimit) {
             transform.Translate(Vector3.back * zerozeroLimit);
@@ -111,11 +124,13 @@ public class Procgen : MonoBehaviour
                 }
             }
         } else {
+            
             //cull any children past limit 
             for(int i = 0; i < transform.childCount; i++) {
                 tryCullChild(i);
             }
-        }
+        }*/
+
 
 
         //CALL ALL THE GENERATORS UPDATE FUNCTIONS 
