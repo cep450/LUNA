@@ -48,11 +48,11 @@ public class Procgen : MonoBehaviour
     public Sprite spr_brokencar;
         */
 
-        ProcgenPieceGenerator speedsign = new ProcgenPieceGenerator(spr_speedsign, 10, -4.1f, 300, 250, this);
-        speedsign.genapartwiggle = 25;
+        ProcgenPieceGenerator speedsign = new ProcgenPieceGenerator(spr_speedsign, 11.5f, -4.1f, 500, 325, this);
+        speedsign.genapartwiggle = 50;
         generators.Add(speedsign);
 
-        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 30, 300, 100, this);
+        ProcgenPieceGenerator birds = new ProcgenPieceGenerator(spr_birds, 0, 30, 500, 100, this);
         birds.genapartwiggle = 20;
         birds.initxwiggle = 100;
         birds.initywiggle = 10;
@@ -62,25 +62,35 @@ public class Procgen : MonoBehaviour
         birds.animation = birdsanim;
         generators.Add(birds);
 
-        ProcgenPieceGenerator trees = new ProcgenPieceGenerator(spr_tree1, 50, -4.1f, 300, 150, this);
+        ProcgenPieceGenerator trees = new ProcgenPieceGenerator(spr_tree1, 60, -4.1f, 500, 200, this);
         trees.clumpsizemax = 8;
         trees.clumpsizemin = 1;
-        trees.clumpwigglex = 10;
+        trees.clumpwigglex = 15;
         trees.clumpwiggley = 0;
-        trees.clumpwigglez = 10;
-        trees.initxwiggle = 25;
+        trees.clumpwigglez = 15;
+        trees.initxwiggle = 30;
         trees.sprites.Add(spr_tree2);
-        trees.genapartwiggle = 50;
+        trees.genapartwiggle = 100;
+        trees.dim = true;
 
         generators.Add(trees);
 
         ProcgenPieceGenerator treesLeft = new ProcgenPieceGenerator(spr_tree1, trees.initxbaseline, trees.initybaseline, trees.initzbaseline, trees.genapartbaseline, this);
+        treesLeft.clumpsizemax = 8;
+        treesLeft.clumpsizemin = 1;
+        treesLeft.clumpwigglex = 15;
+        treesLeft.clumpwiggley = 0;
+        treesLeft.clumpwigglez = 15;
+        treesLeft.initxwiggle = 30;
         treesLeft.initxbaseline = -trees.initxbaseline;
         treesLeft.sprites.Add(spr_tree2);
+        treesLeft.genapartwiggle = 100;
+        treesLeft.dim = true; 
         treesLeft.flipsprite = true;
+        
         generators.Add(treesLeft);
 
-        ProcgenPieceGenerator guardrail = new ProcgenPieceGenerator(spr_guardrail, 10, -4.1f, 300, 50, this);
+        ProcgenPieceGenerator guardrail = new ProcgenPieceGenerator(spr_guardrail, 10, -4.1f, 400, 50, this);
         guardrail.genapartwiggle = 20;
         generators.Add(guardrail);
 
