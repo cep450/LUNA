@@ -82,7 +82,7 @@ public class Procgen : MonoBehaviour
         treesLeft.clumpwiggley = 0;
         treesLeft.clumpwigglez = 15;
         treesLeft.initxwiggle = 30;
-        treesLeft.initxbaseline = -trees.initxbaseline;
+        treesLeft.initxbaseline = -trees.initxbaseline - 2.5f;
         treesLeft.sprites.Add(spr_tree2);
         treesLeft.genapartwiggle = 100;
         treesLeft.dim = true; 

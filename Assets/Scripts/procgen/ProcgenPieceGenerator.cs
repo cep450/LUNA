@@ -178,7 +178,7 @@ public class ProcgenPieceGenerator
 
             //dim if needed(gets darker further from road, by changing the sprite color towards black)
             if(dim) {
-                float dimval = (255 - (Mathf.Clamp(Mathf.Abs(x) * 2f - 25, 0, 255))) / 255; //0-255 from road inverted, ``\
+                float dimval = (255 - (Mathf.Clamp(Mathf.Abs(x) * 2f, 0, 255)) + 30) / 255; //0-255 from road inverted, ``\
                 sprRenderer.color = new Color(dimval, dimval, dimval, 1);
 
                 
