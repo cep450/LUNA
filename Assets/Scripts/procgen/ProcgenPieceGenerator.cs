@@ -44,6 +44,8 @@ public class ProcgenPieceGenerator
     public bool isAnimation = false;
     public AnimationClip animation;
 
+    public bool dim = false;
+
 
     //these are basically constructors, it's just not good to use constructors with monobehaviors or something 
     //TODO nvm making this not a monobehavior it can just be a class. could bring back constructors if i wanted! 
@@ -166,11 +168,20 @@ public class ProcgenPieceGenerator
             obj.GetComponent<Animation>().clip = animation;
         } else {
             obj.GetComponent<Animation>().enabled = false;
-            obj.GetComponent<SpriteRenderer>().sprite = sprites[spriteindex];
+            SpriteRenderer sprRenderer = obj.GetComponent<SpriteRenderer>();
+            sprRenderer.sprite = sprites[spriteindex];
 
             //flip if needed 
             if(flipsprite) {
-                obj.GetComponent<SpriteRenderer>().flipX = true;
+                sprRenderer.flipX = true;
+            }
+
+            //dim if needed(gets darker further from road, by changing the sprite color towards black)
+            if(dim) {
+                float dimval = (255 - (Mathf.Clamp(Mathf.Abs(x) * 2f, 0, 255)) + 30) / 255; //0-255 from road inverted, ``\
+                sprRenderer.color = new Color(dimval, dimval, dimval, 1);
+
+                
             }
         }
         
